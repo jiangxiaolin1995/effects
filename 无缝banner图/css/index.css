@@ -1,0 +1,85 @@
+#banner {
+  width: 520px;
+  height: 280px;
+  margin: 20px auto;
+  border: 1px solid red;
+  position: relative;
+}
+
+#banner .pic {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+#banner .pic ul {
+  width: 1000%;
+  overflow: hidden;
+  margin-left: -520px;
+}
+
+#banner .pic ul li {
+  float: left;
+}
+
+#banner .tab {
+  width: 70px;
+  height: 14px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: 10px;
+  border-radius: 7px;
+}
+
+#banner .tab ul li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #999;
+  float: left;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+#banner .tab ul li.on {
+  background: #f60;
+}
+
+#banner .btn {
+  display: none;
+}
+
+#banner .btn div {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+}
+
+#leftBtn {
+  left: 5px;
+}
+
+#rightBtn {
+  right: 5px;
+}
+
+#banner .btn div.hover {
+  background: rgba(0, 0, 0, 0.6)
+}
