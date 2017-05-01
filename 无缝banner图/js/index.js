@@ -15,29 +15,30 @@ $(function () {
     // console.log(liIndex);
     $(this).addClass('on').siblings().removeClass('on');
     $picUl.animate({
-      marginLeft: -moveWidth * (index + 1) + 'px'
+      marginLeft: -moveWidth * (index + 1) + 'px' // 把整个ul想左移动
     }, 300);
   });
+
   $banner.hover(function () {
     $btn.show();
     clearInterval(timer);
   }, function () {
     $btn.hide();
-    timer = setInterval(function(){
-      index ++;
+    timer = setInterval(function () {
+      index++;
       fn();
-    },5000)
+    }, 5000)
   });
   // 点击左右按钮切换
   $btnDiv.hover(function () {
     $(this).addClass('hover');
   }, function () {
-    $(this).removeClass('hover');;
+    $(this).removeClass('hover');
   }).click(function () {
     if (new Date() - nowTime > 300) {
       nowTime = new Date();
-      var i = $(this).index();
-      if (i) {
+      var i = $(this).index(); //把当前的点击按钮的序列号存下来
+      if (i) { // 如果点击按钮序列号为真 则把序列号++ 
         index++;
       } else {
         index--;
@@ -51,7 +52,7 @@ $(function () {
       // }
       // $tabLi.eq(liIndex).addClass('on').siblings().removeClass('on');
       // $picUl.animate({
-      //   marginLeft: -moveWidth * (index + 1) + 'px'
+      //   marginLeft: -moveWidth * (index + 1) + 'px' // 然后把pic ul的左边距继续往左移动
       // }, 300, function () {
       //   if (index == $tabLi.length) {
       //     $picUl.css('marginLeft', -moveWidth + 'px');
