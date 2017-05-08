@@ -50,12 +50,12 @@
 			var oP = document.getElementById('progress').getElementsByTagName('p')[0];
 			var oCss = document.getElementById('css');
 			function move(num){
-				clearInterval( oP.timer );
+				clearInterval( oP.timer ); // 每次清楚一下定时器
 				oP.timer = setInterval(function(){
 					if ( parseInt( oP.innerHTML ) < num )
 					{
-						var s = parseInt( oP.innerHTML ) + 1;
-						var w = 500 * s / 100;
+						var s = parseInt( oP.innerHTML ) + 1; //让百分数 + 1
+						var w = 500 * s / 100; // 宽度百分比 让宽度更好看
 						oP.innerHTML = s + '%';
 						oP.style.width = w + 'px';
 					}
@@ -64,9 +64,9 @@
 						clearInterval( oP.timer );
 						if ( num == 100 )
 						{
-							oP.parentNode.parentNode.removeChild(oP.parentNode);
-							oCss.parentNode.removeChild(oCss);
-							var oScript = document.getElementsByClassName('pMove');
+							oP.parentNode.parentNode.removeChild(oP.parentNode); // 获取oP 的父级元素并移除 
+							oCss.parentNode.removeChild(oCss); // 移除样式
+							var oScript = document.getElementsByClassName('pMove'); // 移除页面中的 脚本
 							var length = oScript.length
 							for ( var i=length-1;i>=0;i-- )
 							{
